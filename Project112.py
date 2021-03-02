@@ -38,13 +38,19 @@ def random_set_of_means(counter):
 
 def show_fig(mean_list):
   sampling_mean1 = statistics.mean(mean_list)
-  sampling_std1 = statistics.stdev(mean_list)
+  sampling_median1 = statistics.median(mean_list)
+  sampling_mode1 = statistics.mode(mean_list)
   sampling_mean2 = statistics.mean(mean_list)
-  sampling_std2 = statistics.stdev(mean_list)
+  sampling_median2 = statistics.median(mean_list)
+  sampling_mode2 = statistics.mode(mean_list)
+
   print("The mean of the first sample is ", sampling_mean1)
-  print("The standard deviation of the first sample is ", sampling_std1)
+  print("The median of the first sample is ", sampling_median1)
+  print("The mode of the first sample is ", sampling_mode1)
   print("The mean of the second sample is ", sampling_mean2)
-  print("The standard deviation of the second sample is ", sampling_std2)
+  print("The median of the second sample is ", sampling_median2)
+  print("The mode of the second sample is ", sampling_mode2)  
+
 
   correlation = np.corrcoef(dataset1, dataset2)
   print("The correlation between the 1st sample set and the second one is: ", correlation[0,1])
